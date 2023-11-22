@@ -1,7 +1,22 @@
 'use strict';
 console.log('main.js file was loaded');
 
-// sukurti nauja saka su savo inicialais (kurti is main)
-// padaryti bent 1-2 pakeitimus ir juos sukomitinti
-// papublikuoti saka kad ji matytusi debesyje
-// pakeisti sakas is savo i main ir matyti pakeitimus
+const mainArr = [2, 12.5, 33, -7.2, 28, 49, -17, 19.9, 42, -14.45, -10, 20];
+console.log('mainArr ===', mainArr);
+// grazinti nauja masyva pakelti masyvo narius kvadratu
+
+let kvadratuArr = mainArr.map((sk) => {
+  let skPakeltasKv = sk * sk;
+  skPakeltasKv = Math.pow(sk, 2);
+  skPakeltasKv = sk ** 2;
+  // console.log('skPakeltasKv ===', skPakeltasKv);
+  return skPakeltasKv;
+});
+kvadratuArr = mainArr.map((sk) => sk * sk);
+console.log('kvadratuArr ===', kvadratuArr);
+
+// 6. Atrinkti tiktai lyginių skaičių masyvą
+const lyginiai = mainArr.filter((sk) => sk % 2 === 0);
+console.log('lyginiai ===', lyginiai);
+let sk = 20;
+console.log(sk % 2 === 0);
