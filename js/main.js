@@ -20,3 +20,27 @@ const lyginiai = mainArr.filter((sk) => sk % 2 === 0);
 console.log('lyginiai ===', lyginiai);
 let sk = 20;
 console.log(sk % 2 === 0);
+
+// 8. Visas neigiamas vertes masyve padaryti teigiamomis
+let onlyPositivesArr = mainArr.map((sk) => {
+  // kiekviena reiksme kaip sk
+  // tikrinti ar sk yra maziau uz 0
+  // if (sk < 0) {
+  //   return sk * -1;
+  // }
+
+  // return sk;
+  // sk < 0 ? return sk * -1 : return sk;
+  return sk < 0 ? sk * -1 : sk;
+  // jei taip tai * -1
+  // grazinti reiksme kad gryztu i onlyPositivesArr
+});
+onlyPositivesArr = mainArr.map((sk) => (sk < 0 ? sk * -1 : sk));
+onlyPositivesArr = mainArr.map((sk) => Math.abs(sk));
+console.log('onlyPositivesArr ===', onlyPositivesArr);
+
+// 13. Atrinkti kas penktą elementą
+// panaudoti filter
+// viduje mes tikrinam ar indexas yra 5 kartotinis (idx % 5 === 0)
+// jei yra tai atrenkam
+// jei ne praleidziam
