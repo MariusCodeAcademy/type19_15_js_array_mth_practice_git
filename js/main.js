@@ -41,6 +41,19 @@ console.log('onlyPositivesArr ===', onlyPositivesArr);
 
 // 13. Atrinkti kas penktą elementą
 // panaudoti filter
-// viduje mes tikrinam ar indexas yra 5 kartotinis (idx % 5 === 0)
-// jei yra tai atrenkam
-// jei ne praleidziam
+let kasPenktas = mainArr.filter((sk, idx) => {
+  if (idx % 5 === 0) {
+    return true;
+  }
+});
+kasPenktas = mainArr.filter((sk, idx) => idx % 8 === 0);
+console.log('kasPenktas ===', kasPenktas);
+function atrinkKas(kelintas) {
+  let rez = mainArr.filter((sk, idx) => idx % kelintas === 0);
+  return rez;
+}
+
+let atrArrow = (kelintas) => mainArr.filter((sk, idx) => idx % kelintas === 0);
+
+const atrinkta = atrinkKas(10);
+console.log('atrinkta ===', atrinkta);
