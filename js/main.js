@@ -57,3 +57,22 @@ let atrArrow = (kelintas) => mainArr.filter((sk, idx) => idx % kelintas === 0);
 
 const atrinkta = atrinkKas(10);
 console.log('atrinkta ===', atrinkta);
+
+// 14. Sukurti funkciją, kuri ima masyvą ir atspausdina kiek-
+//     vieną jo reikšmę atskirai:
+//     [0] => 2.
+//     [1] => 12.
+//     [2] => 33.
+//     (nieko negrąžina)
+
+/**
+ *
+ * @param {number[]} arr
+ */
+function printArray(arr) {
+  arr.forEach((sk, idx) => {
+    let rez = `[${idx}] => ${sk}`;
+    console.log(rez);
+  });
+}
+printArray(mainArr);
